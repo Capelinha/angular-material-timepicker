@@ -14,12 +14,13 @@ import {
   Optional,
   SimpleChanges
 } from '@angular/core';
-import { MatDialog, MatDialogRef, MatInput } from '@angular/material';
-import { ITimeData, ClockMode, IAllowed24HourMap, IAllowed12HourMap } from '../interfaces-and-types';
+import { MatDialogRef, MatDialog, } from '@angular/material/dialog';
+import { MatInput } from '@angular/material/input';
+import { ClockMode, IAllowed24HourMap, IAllowed12HourMap } from '../interfaces-and-types';
 import { twoDigits, convertHoursForMode, isAllowed } from '../util';
 import { MatTimepickerComponentDialogComponent } from '../timepicker-dialog/timepicker-dialog.component';
 import { Subject } from 'rxjs';
-import { takeUntil, first, min } from 'rxjs/operators';
+import { takeUntil, first } from 'rxjs/operators';
 import { InvalidInputComponent } from '../invalid-input/invalid-input.component';
 
 @Component({
